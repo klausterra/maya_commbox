@@ -1,0 +1,19 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "ip_address": "Endereço IP"
+        },
+        "description": "Configure a conexão com o módulo CommBox MIO."
+      }
+    },
+    "error": {
+      "cannot_connect": "Falha ao conectar ao CommBox MIO",
+      "unknown": "Erro inesperado"
+    },
+    "abort": {
+      "already_configured": "Dispositivo já está configurado"
+    }
+  }
+}

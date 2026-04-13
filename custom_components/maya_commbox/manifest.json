@@ -1,0 +1,12 @@
+{
+  "domain": "maya_commbox",
+  "name": "CommBox MIO",
+  "documentation": "https://github.com/klausterra/ha-commbox-mio",
+  "issue_tracker": "https://github.com/klausterra/ha-commbox-mio/issues",
+  "dependencies": [],
+  "codeowners": ["@klausterra"],
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "version": "1.0.0",
+  "requirements": ["aiohttp"]
+}
