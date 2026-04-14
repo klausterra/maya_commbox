@@ -1,7 +1,0 @@
-{
-  "name": "CommBox MIO",
-  "content_type": "integration",
-  "domains": ["maya_commbox"],
-  "iot_class": "local_polling",
-  "render_readme": true
-}

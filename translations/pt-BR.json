@@ -1,0 +1,31 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "ip_address": "Endereço IP"
+        },
+        "description": "Configure a conexão com o módulo Maya Commbox."
+      }
+    },
+    "error": {
+      "cannot_connect": "Falha ao conectar ao Maya Commbox",
+      "unknown": "Erro inesperado"
+    },
+    "abort": {
+      "already_configured": "Dispositivo já está configurado"
+    }
+  },
+  "services": {
+    "pulse_output": {
+      "name": "Pulsar Saída",
+      "description": "Aciona uma saída CommBox por uma duração específica.",
+      "fields": {
+        "duration": {
+          "name": "Duração",
+          "description": "Duração do pulso em milissegundos."
+        }
+      }
+    }
+  }
+}

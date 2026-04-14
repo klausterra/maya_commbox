@@ -1,8 +1,8 @@
 {
   "domain": "maya_commbox",
-  "name": "CommBox MIO",
-  "documentation": "https://github.com/klausterra/ha-commbox-mio",
-  "issue_tracker": "https://github.com/klausterra/ha-commbox-mio/issues",
+  "name": "Maya Commbox",
+  "documentation": "https://www.mayahome.ia.br",
+  "issue_tracker": "https://www.hiperenge.com.br",
   "dependencies": [],
   "codeowners": ["@klausterra"],
   "config_flow": true,

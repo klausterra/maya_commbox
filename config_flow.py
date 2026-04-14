@@ -1,4 +1,4 @@
-"""Config flow for CommBox MIO integration."""
+"""Config flow for Maya Commbox integration."""
 from __future__ import annotations
 
 import logging
@@ -10,6 +10,8 @@ from homeassistant import config_entries
 from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import FlowResult
 from homeassistant.exceptions import HomeAssistantError
+
+from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
 from .const import DOMAIN, CONF_IP
 from .hub import CommBoxHub
@@ -24,16 +26,17 @@ STEP_USER_DATA_SCHEMA = vol.Schema(
 
 async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> dict[str, Any]:
     """Validate the user input allows us to connect."""
-    hub = CommBoxHub(data[CONF_IP])
+    session = async_get_clientsession(hass)
+    hub = CommBoxHub(data[CONF_IP], session)
 
     if not await hub.test_connection():
         raise CannotConnect
 
     # Return info that you want to store in the config entry.
-    return {"title": f"CommBox MIO ({data[CONF_IP]})"}
+    return {"title": f"Maya Commbox ({data[CONF_IP]})"}
 
 class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
-    """Handle a config flow for CommBox MIO."""
+    """Handle a config flow for Maya Commbox."""
 
     VERSION = 1
 

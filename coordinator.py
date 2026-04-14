@@ -1,4 +1,4 @@
-"""DataUpdateCoordinator for CommBox MIO."""
+"""DataUpdateCoordinator for Maya Commbox."""
 from datetime import timedelta
 import logging
 
@@ -26,5 +26,5 @@ class CommBoxDataUpdateCoordinator(DataUpdateCoordinator):
         """Fetch data from hub."""
         data = await self.hub.get_io_status()
         if data is None:
-            raise UpdateFailed("Error communicating with CommBox MIO")
+            raise UpdateFailed("Error communicating with Maya Commbox")
         return data
